@@ -1,10 +1,10 @@
 const app = require('./src/app');
 
-const port = 3001;
+const PORT = 3001;
 
-app.listen(port, () => {
+app.listen(PORT, () => {
 
-    console.log(`toc, toc na porta ${port}`);
+    console.info(`toc, toc na porta ${PORT}`);
 
 });
 
