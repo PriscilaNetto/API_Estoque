@@ -7,7 +7,9 @@ const produtosSchema = new Schema({
     modelagem: { type: String, required: true},
     cor: { type: String, required: true},
     quantidade: { type: String, required: true},
-    fornecedor: { type: String, required: true}
+    fornecedor: { type: String, required: true},
+    dataEntrada: {type: Date},
+    dataSaída: {type: Date}
 })
 
 const produtosCollection = mongoose.model('produtos', produtosSchema)
