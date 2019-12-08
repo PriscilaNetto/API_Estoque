@@ -2,25 +2,21 @@ const express = require('express')
 const app = express()
 const index = require('./routes/index')
 const cors = require('cors')
-
 const bodyParser = require('body-parser')
-
-
-
-// const listaProdutos = require('./routes/produtos');
+const PORT = 3001
+const listaProdutos = require('./routes/produtos');
 
 app.use(bodyParser.json())
 app.use(cors())
+app.use('produtos', listaProdutos)
 
-// app.use(function (request, response, next){
-//     response.header('Access-Control-Allow-Origin', '*')
-//     response.header(
-//         'Acess-Control-Allow-Headers',
-//         'Origin, X-Requested-With, Content-Type, Accept'
-//     );
-//     next()
-// });
-app.use('/', index)
-// app.use('produtos', produtos)
+app.get('/', (request, response) => {
+    response.send('1...2...3...Ufa, deu certo!')
+})
+
+app.listen(PORT)
+
+    console.info(`toc, toc na porta ${PORT}`);
+
 
 module.exports = app
