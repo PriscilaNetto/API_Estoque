@@ -12,19 +12,37 @@ const listaProdutos = (request, response) => {
         })
     }
 
-// const adicionaProduto = (request, response) => {
+const novoProduto = (request, response) => {
 
-//     const novoProduto = new produtosModel(request.body)
-//     novoProduto.save((error) => {
-//         if (error) {
-//             return response.status(500).send(error)
-//         }
-//             return response.status(201).send(novoProduto)
-//     })
-// }
+    const adicionaProduto = new produtosModel(request.body)
+    adicionaProduto.save((error) => {
+        if (error) {
+            return response.status(500).send(error)
+        }
+            return response.status(201).send(adicionaProduto)
+    })
+}
+
+const produtoById = (request, response) => {
+    const id = request.params.id
+
+    return produtosModel.findById(id, (error, produto) =>{
+        if (error) {
+            return response.status(500).send(error)
+        }
+        
+        if(produto) {
+         
+            return response.status(200).send(produto)
+        }
+            return response.status(404).send('Xii, não encontrei seu produto')
+
+    })
+}
 
 
 module.exports = {
-    listaProdutos
-    // adicionaProduto
+    listaProdutos,
+    novoProduto,
+    produtoById
 }

@@ -3,8 +3,16 @@
   "version": "1.0.0",
   "description": "Projeto Final na Reprograma, onde será desenvolvido uma API para controlar estoque, usando o MongoDB.",
   "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  },
   "scripts": {
-    "start": ": node app.js",
     "start:dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,13 +25,5 @@
   "bugs": {
     "url": "https://github.com/PriscilaNetto/projetoFinal/issues"
   },
-  "homepage": "https://github.com/PriscilaNetto/projetoFinal#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.1"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "mongoose": "^5.7.12"
-  }
+  "homepage": "https://github.com/PriscilaNetto/projetoFinal#readme"
 }
