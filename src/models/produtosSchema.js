@@ -7,6 +7,7 @@ const ProdutosSchema = new Schema({
     modelagem: { type: String, required: true},
     cor: { type: String, required: true},
     quantidade: { type: Number, required: true},
+    quantidadeVenda: {type: Number},
     fornecedor: { type: String, required: true},
     dataEntrada: {type: Date},
     dataSaída: {type: Date}
