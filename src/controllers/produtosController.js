@@ -1,5 +1,5 @@
 const {connect} = require ('../models/database')
-const produtosModel = require('../models/produtosSchema')
+const produtosModel = require('../models/')
 
 connect()
 
@@ -59,6 +59,29 @@ const atualizaProduto = (request, response) => {
     )
 }
 
+const atualizaQuantidade = (request, response) => {
+    const id = request.params.id
+    const venda = request.body
+    const camiseta = produtosModel.id
+    const alterarQuantidade = camiseta.quantidade - venda
+
+    const options = {new: true}
+
+    produtosModel.findByIdAndUpdate(
+        id, alterarQuantidade, options,
+        (error, quantidade) => {
+            if(error) {
+                return response.status(500).send(error)
+            }
+            if(quantidade) {
+                return response.status(200).send(quantidade)
+            }
+            return response.status(404).send('Xii, não encontrei seu produto')
+        }
+    )
+}
+
+
 const removeProduto = (request, response) => {
     const id  = request.params.id
     produtosModel.findByIdAndRemove(id, (error, produto) => {
@@ -79,5 +102,6 @@ module.exports = {
     novoProduto,
     produtoById,
     atualizaProduto,
-    removeProduto
+    removeProduto,
+    atualizaQuantidade
 }
