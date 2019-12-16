@@ -1,5 +1,5 @@
 const {connect} = require ('../models/database')
-const produtosModel = require('../models/ProdutosSchema')
+const produtosModel = require('../models/produtosSchema')
 
 connect()
 
