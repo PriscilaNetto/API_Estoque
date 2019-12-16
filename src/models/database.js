@@ -1,7 +1,10 @@
 const mongoose = require('mongoose')
-const DB_URL = 'mongodb://localhost:27017/apiestoque'
+const DB_URI= process.env.MONGODB_URI
+
+process.env.PORT
+
 const connect = () => {
-    mongoose.connect(DB_URL, {useNewUrlParser:true})
+    mongoose.connect(DB_URI, {useNewUrlParser:true})
 const connection = mongoose.connection
 connection.on('error', () => console.error('Ops, não conectou :/'))
 
