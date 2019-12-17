@@ -74,7 +74,6 @@ const removeProduto = (request, response) => {
     })
 }
 
-
 module.exports = {
     listaProdutos,
     novoProduto,
