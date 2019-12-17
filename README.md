@@ -2,7 +2,8 @@
 :octocat:**API para gerenciar o estoque de roupas da loja virtual Manifesto Singular**                                                                                   
 
 ## Instalação
-A tecnologia usada foi o NodeJs e o MongoDB. Para instalar:
+A tecnologia usada foi o NodeJs e o MongoDB. 
+Para instalar a API:
 ```
 git clone https://github.com/PriscilaNetto/api-estoque.git
 cd api-estoque
