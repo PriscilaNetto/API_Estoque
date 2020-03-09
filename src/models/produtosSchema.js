@@ -12,6 +12,7 @@ const ProdutosSchema = new Schema({
     dataSaída: {type: Date}
 })
 
+
 const produtosModel = mongoose.model('produtos', ProdutosSchema)
 
 module.exports = produtosModel
