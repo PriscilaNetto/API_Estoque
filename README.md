@@ -1,30 +1,37 @@
- # API Estoque :shirt: :womans_clothes: :jeans: 
-:octocat:**API para gerenciar o estoque de roupas da loja virtual Manifesto Singular**                                                                                   
+# API Estoque :shirt: :womans_clothes: :jeans:
+
+:octocat:**API para gerenciar o estoque de roupas da loja virtual Manifesto Singular**
 
 ## Instalação
-A tecnologia usada foi o NodeJs e o MongoDB. Para instalar:
+
+A tecnologia usada foi o NodeJs e o MongoDB.
+Para instalar a API:
+
 ```
 git clone https://github.com/PriscilaNetto/api-estoque.git
 cd api-estoque
 npm install
+node app.js
 ```
+
 ## Rotas/Endpoints :arrow_right:
 
 - get /produtos/
 
-    mostra todos os produtos cadastrados;
+  mostra todos os produtos cadastrados;
+
 - post /produtos/
 
-    cadastro de um novo produto;
-- get /produtos/:id 
+  cadastro de um novo produto;
 
-    localização do produto pelo id;
+- get /produtos/:id
+
+  localização do produto pelo id;
+
 - patch /produtos/:id
 
-    alteração dos dados do produto pelo id;
+  alteração dos dados do produto pelo id;
+
 - delete/produtos/:id
 
-    remoção do produto pelo id.
-
-
-
+  remoção do produto pelo id.
