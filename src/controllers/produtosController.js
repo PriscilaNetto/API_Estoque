@@ -27,7 +27,6 @@ const produtoById = (request, response) => {
       console.log(error);
       return response.status(500).send(error);
     }
-
     if (produto) {
       return response.status(200).send(produto);
     }
